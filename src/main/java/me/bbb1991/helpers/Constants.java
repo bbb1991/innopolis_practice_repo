@@ -1,4 +1,4 @@
-package helpers;
+package me.bbb1991.helpers;
 
 /**
  * Created by bbb1991 on 11/28/16.

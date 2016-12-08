@@ -1,4 +1,6 @@
-package model;
+package me.bbb1991.model;
+
+import javax.persistence.*;
 
 /**
  * Created by bbb1991 on 11/28/16.
@@ -6,14 +8,31 @@ package model;
  * @author Bagdat Bimaganbetov
  * @author bagdat.bimaganbetov@gmail.com
  */
+
+@Entity
 public class Student {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+
+    @Column
     private String surname;
+
+    @Column
     private String firsname;
+
+    @Column
     private String secondname;
+
+    @Column
     private int sexId;
+
+    @ManyToOne
     private Course course;
+
+    @SuppressWarnings("UnusedDeclaration")
+    public Student() {}
 
     public Student(Integer id, String surname, String firsname, String secondname, int sexId, Course course) {
         this.id = id;
@@ -82,6 +101,13 @@ public class Student {
 
     @Override
     public String toString() {
-        return surname + " " + firsname + " " + secondname;
+        return "Student{" +
+                "id=" + id +
+                ", surname='" + surname + '\'' +
+                ", firsname='" + firsname + '\'' +
+                ", secondname='" + secondname + '\'' +
+                ", sexId=" + sexId +
+                ", course=" + course +
+                '}';
     }
 }

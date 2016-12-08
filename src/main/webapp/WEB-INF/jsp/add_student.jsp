@@ -9,6 +9,8 @@
 <div class="container">
     <h1 class="text-center">Add new student</h1>
     <form class="form-horizontal" method="post" action="${pageContext.request.contextPath}/add_student">
+
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         <fieldset>
 
             <!-- Form Name -->

@@ -1,4 +1,4 @@
-package dao;
+package me.bbb1991.dao;
 
 import java.util.List;
 
@@ -19,7 +19,4 @@ public interface DAO<T> {
 
     void delete(Integer id);
 
-    void createTable();
-
-    void dropTable();
 }
